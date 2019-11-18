@@ -16,7 +16,7 @@ for attempt in itertools.count(1):
 	with open('token', 'w') as f:
 		f.write(token.strip())
 
-	subprocess.run(['git', 'commit', '-am', f'sample #{attempt}'], check=True)
+	subprocess.run(['git', 'commit', '-am', f'invalidating token'], check=True)
 	subprocess.run(['git', 'push'], check=True)
 	t0 = time.perf_counter()
 
