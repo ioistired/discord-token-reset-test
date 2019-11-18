@@ -12,7 +12,9 @@ for attempt in itertools.count(1):
 	except EOFError:
 		break
 
-	assert validate_token(token)
+	if not validate_token(token):
+		continue
+
 	with open('token', 'w') as f:
 		f.write(token.strip())
 
