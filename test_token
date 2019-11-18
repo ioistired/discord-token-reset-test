@@ -18,3 +18,6 @@ def main():
 	import sys
 	with open('token') as f:
 		sys.exit(2 if not validate_token(f.read().strip()) else 0)
+
+if __name__ == '__main__':
+	main()
